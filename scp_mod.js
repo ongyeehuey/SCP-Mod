@@ -1,10 +1,9 @@
 /**
  * SCP Mod v1.1.0
  *
- * Author   : Onishim Hasdak
  * Features :
- *   1. Expands conversation history on load of SCP issue page
- *   2. Add SUMMARY & Complexity label to Notes in SCP issue page & choose to highlight
+ *  1.  Expand conversation history on load of SCP issue page
+ *  2.  Highlight (default) and/or add label to SUMMARY & Complexity Notes in SCP issue page 
  */
 
 // default variables
