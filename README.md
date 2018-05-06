@@ -28,6 +28,5 @@ Enhancement mods for SCP
  */
 var user_highlight = true;
 var user_label = true;
-// ===============
 ```
 3. Save the changes. You're good to go.
