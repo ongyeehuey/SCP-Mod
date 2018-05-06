@@ -5,11 +5,10 @@ Enhancement mods for SCP
 1. 	Expand conversation history on load of SCP issue page
 2. 	Highlight (default) and/or add label to SUMMARY & Complexity Notes in SCP issue page 
 
-###### Instructions of use:
-1. Install Tampermonkey Add-on to your browser from below links,
-
-...*For Firefox*: https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/?src=search
-...*For Chrome* : https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
+###### Instructions for use:
+1. Install Tampermonkey Add-on to your browser from below links.
+* *For Firefox* : https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/?src=search
+* *For Chrome* : https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
 
 2. Click the Add-on icon, which should appear in the upper right corner of the browser, then click 'Create a new script', and add the following code:
 ```javascript
