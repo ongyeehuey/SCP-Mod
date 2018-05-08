@@ -4,6 +4,7 @@ Enhancement mods for SCP
 ###### Added Features:
 1. 	Expand conversation history on load of SCP issue page
 2. 	Highlight (default) and/or add label to SUMMARY & Complexity Notes in SCP issue page 
+3.	Scroll to Conversation section
 
 ###### Instructions for use:
 1. Install Tampermonkey Add-on to your browser from below links.

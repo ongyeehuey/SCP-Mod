@@ -4,6 +4,7 @@
  * Features :
  *  1.  Expand conversation history on load of SCP issue page
  *  2.  Highlight (default) and/or add label to SUMMARY & Complexity Notes in SCP issue page 
+ *  3.  Scroll to Conversation section
  */
 
 // default variables
@@ -81,3 +82,48 @@ function highlightNotes(){
         }
     });
 }
+
+
+/**
+ * Scroll feature
+ */
+
+var scroll_offset = 0;
+
+if($('#RvAcnHdr').length){
+    scroll_offset = $('#RvAcnHdr').height();
+}
+
+$('#RvAcnHdr table tbody tr').append(
+    '<td style="position:absolute; right:30px"><a class="acnbtn fl mr10" id="scroll_conversation"><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Back to Request List"></a></td>'
+    //'<td style="position:absolute; right:30px"><span class="" id="scroll_conversation"><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Back to Request List"></span></td></tr>'
+);
+
+$('#RvAcnHdr table tbody tr').on('click', '#scroll_conversation', function() {
+    scrollTo($("#Conversation"));
+});
+
+function scrollTo(element)
+{
+    if(! $('#RvAcnHdr.FixedAcnBar').length){
+        scroll_offset = scroll_offset * 2;
+    }
+    //alert(scroll_offset);
+    $('html,body').animate({
+        scrollTop: element.offset().top - scroll_offset
+    });
+}
+
+/*
+// add fixed menu bar at bottom right
+$('body').append(
+    '<div class="my_panel" style="position:fixed; height:auto; width:auto; background-color:aliceblue; opacity:0.8; right:0px; bottom:5px"><button id="scroll_up" style=""><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Back to Request List"></button></div>'
+);
+
+$('#scroll_up').click(function(){
+    //alert("scrolling"+ $(':focus').id );
+    scrollTo($("#Conversation"));
+});
+*/
+
+// End Scroll feature
