@@ -105,12 +105,13 @@ $('#RvAcnHdr table tbody tr').on('click', '#scroll_conversation', function() {
 
 function scrollTo(element)
 {
+    var offset = scroll_offset;
     if(! $('#RvAcnHdr.FixedAcnBar').length){
-        scroll_offset = scroll_offset * 2;
+        offset = scroll_offset * 2;
     }
-    //alert(scroll_offset);
+    //alert(offset);
     $('html,body').animate({
-        scrollTop: element.offset().top - scroll_offset
+        scrollTop: element.offset().top - offset
     });
 }
 
