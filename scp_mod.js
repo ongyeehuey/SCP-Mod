@@ -4,7 +4,7 @@
  * Features :
  *  1.  Expand conversation history on load of SCP issue page
  *  2.  Highlight (default) and/or add label to SUMMARY & Complexity Notes in SCP issue page 
- *  3.  Scroll to Conversation section
+ *  3.  Scroll to Request Details, Conversations & Request Properties section
  */
 
 // default variables
@@ -87,20 +87,36 @@ function highlightNotes(){
 /**
  * Scroll feature
  */
-
+ 
+// offset from the header bar #RvAcnHdr
 var scroll_offset = 0;
-
 if($('#RvAcnHdr').length){
     scroll_offset = $('#RvAcnHdr').height();
 }
 
+// Add Scroll buttons to the header bar #RvAcnHdr
 $('#RvAcnHdr table tbody tr').append(
-    '<td style="position:absolute; right:30px"><a class="acnbtn fl mr10" id="scroll_conversation"><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Back to Request List"></a></td>'
-    //'<td style="position:absolute; right:30px"><span class="" id="scroll_conversation"><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Back to Request List"></span></td></tr>'
+    // Add Scroll buttons - Request Properties
+    '<td id="td_scroll_properties" style="position:absolute; right:15px"><a class="acnbtn fl mr10" id="scroll_properties"><img src="images/spacer.gif" class="scpicon181" vspace="4" border="0" title="Request Properties"></a></td>' +
+    // Add Scroll buttons - Conversations
+    '<td id="td_scroll_conversation" style="position:absolute; right:56px"><a class="acnbtn fl mr10" id="scroll_conversation"><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Conversations"></a></td>' +
+    // Add Scroll buttons - Request Details
+    '<td id="td_scroll_reqdetail" style="position:absolute; right:100px"><a class="acnbtn fl mr10" id="scroll_reqdetail"><img src="images/spacer.gif" class="scpicon214" vspace="4" border="0" title="Request Details"></a></td>'
 );
 
+// Scroll to Request Description
+$('#RvAcnHdr table tbody tr').on('click', '#scroll_reqdetail', function() {
+    scrollTo($("#reqSummaryHdr"));
+});
+
+// Scroll to Conversations
 $('#RvAcnHdr table tbody tr').on('click', '#scroll_conversation', function() {
     scrollTo($("#Conversation"));
+});
+
+// Scroll to Request Properties
+$('#RvAcnHdr table tbody tr').on('click', '#scroll_properties', function() {
+    scrollTo($("#ProDetails"));
 });
 
 function scrollTo(element)
