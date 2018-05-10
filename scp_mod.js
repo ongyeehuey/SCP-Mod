@@ -97,11 +97,11 @@ if($('#RvAcnHdr').length){
 // Add Scroll buttons to the header bar #RvAcnHdr
 $('#RvAcnHdr table tbody tr').append(
     // Add Scroll buttons - Request Properties
-    '<td id="td_scroll_properties" style="position:absolute; right:15px"><a class="acnbtn fl mr10" id="scroll_properties"><img src="images/spacer.gif" class="scpicon181" vspace="4" border="0" title="Request Properties"></a></td>' +
+    '<td id="td_scroll_properties" style="position:absolute; right:15px"><a class="acnbtn fl mr10" id="scroll_properties" style="border-color: #0394bf"><img src="images/spacer.gif" class="scpicon214" vspace="3" border="0" title="Request Properties"></a></td>' +
     // Add Scroll buttons - Conversations
-    '<td id="td_scroll_conversation" style="position:absolute; right:56px"><a class="acnbtn fl mr10" id="scroll_conversation"><img src="images/spacer.gif" class="scpicon164" vspace="4" border="0" title="Conversations"></a></td>' +
+    '<td id="td_scroll_conversation" style="position:absolute; right:56px"><a class="acnbtn fl mr10" id="scroll_conversation" style="border-color: #0394bf"><img src="images/spacer.gif" class="scpicon164" vspace="3" border="0" title="Conversations"></a></td>' +
     // Add Scroll buttons - Request Details
-    '<td id="td_scroll_reqdetail" style="position:absolute; right:100px"><a class="acnbtn fl mr10" id="scroll_reqdetail"><img src="images/spacer.gif" class="scpicon214" vspace="4" border="0" title="Request Details"></a></td>'
+    '<td id="td_scroll_reqdetail" style="position:absolute; right:100px"><a class="acnbtn fl mr10" id="scroll_reqdetail" style="border-color: #0394bf"><img src="images/spacer.gif" class="scpicon97" vspace="3" border="0" title="Request Details"></a></td>'
 );
 
 // Scroll to Request Description
