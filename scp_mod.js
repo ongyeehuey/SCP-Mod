@@ -15,7 +15,9 @@ var color_complexity = "lavender";
 
 $(document).ready(function() {
     //alert("Welcome to SCP");
-
+    // Add SCP # to browser title
+    $(document).attr("title", "SCP#"+window.location.href.match(/\d+/)[0]);
+    
     // override user's highlight preference
     if (typeof user_highlight !== 'undefined') {
       highlight = user_highlight;
