@@ -17,7 +17,7 @@ $(document).ready(function() {
     //alert("Welcome to SCP");
     // Add SCP # to browser title
     var priority = jQuery('#PRIORITYID_CUR').text();
-    $(document).attr("title", priority+": SCP#"+window.location.href.match(/\d+/)[0]);
+    $(document).attr("title", priority.charAt(0)+": SCP#"+window.location.href.match(/\d+/)[0]);
     
     // override user's highlight preference
     if (typeof user_highlight !== 'undefined') {
